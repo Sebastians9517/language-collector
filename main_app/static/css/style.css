@@ -178,6 +178,13 @@ td,
 th {
   padding: 0;
 }
+
+/* #language-card {
+  border: rgb(168, 252, 0);
+} */
+
+
+
 @media print {
   *,
   *:before,
