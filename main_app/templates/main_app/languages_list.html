@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Languages List</h1>
+{% for languages in languages_list %}
+<div class="language-card">
+    <h3>{{languages.name}}</h3>
+    <p>{{languages.description}}</p>
+    <div>
+        <a href="{% url 'update' languages.id %}">Update</a>
+        <a href="{% url 'delete' languages.id %}">Delete</a>
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}

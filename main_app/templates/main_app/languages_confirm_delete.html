@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content%}
+
+<h1>Delete Language</h1>
+<h2>Confirm Language deletion&nbsp;{{ object.name }}&nbsp;&nbsp;Y/N</h2>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Y" class="btn">
+    <a href="{% url 'index' %}">N</a>
+</form>
+
+{% endblock %}
