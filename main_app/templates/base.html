@@ -7,16 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
 </head>
 <body>
     <header>
         <nav class="navbar">
             <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'index' %}">All Languages</a></li>
                 <li><a href="{% url 'create' %}">Add Language</a></li>
                 <ul class="right">
                 {% if user.is_authenticated %}
-                <li>Logged in as {{user.username}}&nbsp;<a href="{% url 'logout' %}">Log Out</a></li>
+                <li>Logged in as {{user.username}}:&nbsp;<a href="{% url 'logout' %}">Log Out</a></li>
                 {% else %}
                 <li><a href="{% url 'signup' %}">Sign Up</a></li>
                 <li><a href="{% url 'login' %}">Log In</a></li>
@@ -26,6 +28,7 @@
     </header>
     <main>
         {% block content %}
+
         {% endblock %}
     </main>
 </body>
