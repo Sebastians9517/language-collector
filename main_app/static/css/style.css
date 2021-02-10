@@ -1,18 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 html {
   font-size: 10px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   cursor: url('http://www.rw-designer.com/cursor-view/53496.png'), default;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  caret-shape: block;
 }
+
 body {
   font-family: Monospace;
   font-size: 14px;
   line-height: 1.428571429;
   color: #0c0;
-  background-color: #222;
+  /* background-color: #222; */
   caret-color: #0f0;
+  text-align: center;
+  display: table;
+  background: black;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
-
+li {
+  list-style-type: none;
+}
 
 .navbar li
 {
@@ -20,13 +40,29 @@ body {
   list-style-type: none;
   padding-right: 20px;
   float: right;
+  margin-top: 10px;
 }
 
 .signup-container {
   text-align: center;
 }
 
-#language-card {
+.add-language-form, form, .login-form {
+  box-sizing: border-box;
+  vertical-align: middle;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.add-language-form .btn {
+  align-self: center;
+}
+
+.login-form .btn {
+  margin-top: 10px;
+}
+
+#language-card, form, .login-form, .add-language-form {
   border: rgb(168, 252, 0);
   color : #0F0;
   box-sizing: border-box;
@@ -45,6 +81,7 @@ a:hover,
 a:focus {
   color: #00b300;
   text-decoration: underline;
+  cursor: url('http://www.rw-designer.com/cursor-view/53489.png'), default;
 }
 a:focus {
   outline: thin dotted;
@@ -65,8 +102,10 @@ a:focus {
 
 .btn {
     background: transparent;
-    border: none;
+    border: 1px solid #0F0;
+    padding: 2px;
     color: #0f0;
+    cursor: url('http://www.rw-designer.com/cursor-view/53489.png'), default;
 }
 
 .navbar {
@@ -84,7 +123,7 @@ a:focus {
   vertical-align: middle
 }
 
-.language-list-title {
+.language-list-title, .add-language, .login-title, .signup-title, .delete-title, .delete-confirmation {
   color : #0F0;
   z-index : 1;
   box-sizing: border-box;
@@ -92,7 +131,13 @@ a:focus {
   margin-top: 2%;
 }
 
+.no-languages {
+  margin-top: 30px;
+}
 
+.no-languages .btn {
+  margin-top: 15px;
+}
 
 @keyframes blinker {
   50% {
