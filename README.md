@@ -1,4 +1,4 @@
-# language-tracker
+# Language-tracker
 
 This app will help you keep track of your growth during your developing journey.
 
