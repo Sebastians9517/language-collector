@@ -2,7 +2,7 @@
 {% block content %}
 
 <h1 class="add-language">Add Language</h1>
-    <form action="" method="POST" class="add-language-form">
+    <form action="" method="POST" class="add-language-form" style="margin-left: 42%;">
         {% csrf_token %}
         <table>
             {{ form.as_table }}
