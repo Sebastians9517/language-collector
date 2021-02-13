@@ -10,6 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import os
+import os.path
+import environ
+environ.Env()
+environ.Env.read_env()
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'f@7joh&q5nqoe1o!pkqt=d9gng860&k$we1)+qnqa0h^^r*=2n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -125,5 +131,5 @@ LOGIN_REDIRECT_URL = '/languages/'
 LOGOUT_REDIRECT_URL = '/accounts/login'
 
 # Configure Django App for Heroku.
-import django_heroku
-django_heroku.settings(locals())
+import django_on_heroku
+django_on_heroku.settings(locals())
